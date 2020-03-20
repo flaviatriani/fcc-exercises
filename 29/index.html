@@ -1,0 +1,18 @@
+daily_income = 100.00 /// voice
+pending_like_rewards =
+pending_voiceit_rewards =
+pending_referrer_rewards =
+gross_income = daily_income + pending_like_rewards + pending_voiceit_rewards + pending_referrer_rewards
+tax = gross_income * tax_rate;
+net_income = gross_income - tax;
+issue( 2*daily_income)
+if( referrer_first_year ){
+auto referrer_reward = tax / 10
+auto net_tax = tax - reffer_reward
+pay_reffer_pending_referrer_rewards( tax / 10 )
+buyback(nettax)
+} else {
+buyback( tax )
+}
+add_to_user_balance( net_income )
+add_to_pool( daily_income )
